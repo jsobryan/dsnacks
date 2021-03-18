@@ -4,6 +4,13 @@
     box-sizing: border-box;
   }
 
+.logo{
+    text-align: center;
+}
+
+.logo h1 {
+}
+
   nav {
     font-family: 'Syne Mono', monospace;
     display: flex;
@@ -11,10 +18,27 @@
     align-items: center;
     min-height: 8vh;
   }
-  
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
   main {
     min-height: 100vh;
-    background: linear-gradient(to right top, #F5FDC6, #F1FCB0);
+    background: linear-gradient(to bottom, #F9F9F9, #6ea389);
     font-family: 'Poppins';
   }
 
@@ -30,31 +54,39 @@
     margin: auto;
 }
 
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-}
-
-.nav-links a {
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.hero {
+.bg-image {
+    /* The image used */
     background-image: url('../img/ashkan-forouzani-3A38wAgyEmk-unsplash.jpg');
-    background-size: cover;
-    background-position: center center;
-    color: linen;
-    top: 100px;
+    /* Add the blur effect */
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    border: solid black;
+    backdrop-filter: screen;
+  
+    /* Full height */
     height: 80vh;
-    width: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
 }
 
 .checkbox {
@@ -89,7 +121,11 @@
     line-height: 2.5rem;
 }
 
-.quotes p:nth-of-type(2) {
+.names {
+    align-items: center;
+    text-align: center;
+    padding: 30px;
     color: firebrick;
-    display: inline-block;
+    font-style: italic;
+    line-height: 1.2;
 }
