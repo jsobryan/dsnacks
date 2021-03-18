@@ -105,13 +105,15 @@
     font-size: 50px;
 }
 
-.separator {
-    border-top: solid black;
-    border-bottom: solid black;
-    height: 2px;
-    
+.pics{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pics img{
 
 }
+
 
 .blurbs {
     text-align: center;
