@@ -4,187 +4,294 @@
     box-sizing: border-box;
   }
 
-.logo{
-    text-align: center;
-    padding: 10px;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.logo h1 {
-}
-
-  nav {
-    font-family: 'Syne Mono', monospace;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #F9F9F9;
-  }
-
-  .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-}
-
-.nav-links a {
+a {
     text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: black;
 }
 
-.nav-links a:hover {
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: firebrick;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #EAE2B7;
 }
-
-.nav-links li {
-    list-style: none;
-}
-
-  main {
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #F9F9F9, #5d8f77);
-    font-family: 'Poppins';
-  }
 
 .header {
-    background-color: #d0b17a;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1rem;
+    background-color: #C6ECAE;
+    color:#ca0000;
+    padding: 1em;
+    justify-content: space-around;
 }
 
 .header h1 {
     font-family: 'Kaushan Script', cursive;
-    font-size: 70px;
-    margin: auto;
+    font-size: 5em;
+    line-height: 1em;
+    
 }
 
-.bg-image {
-    /* The image used */
-    background-image: url('../img/ashkan-forouzani-3A38wAgyEmk-unsplash.jpg');
-    /* Add the blur effect */
-    filter: blur(2.5px);
-    -webkit-filter: blur(2.5px);
-    border: solid black;
-    backdrop-filter: screen;
-  
-    /* Full height */
-    height: 80vh;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
+.header i {
+    color: black;
+}
+
+.header img {
+    height: 100px;
+    float: right;
+    border-radius: 50%;
+    position: relative;
+    bottom: 50px;
+    left: 25px;
+    animation: grow 1s;
+}
+
+@keyframes grow {
+    0% {height: 10px; width: auto;}
+    /* 25% {height: 50px; width: auto;} */
+    50% {height: 50px; width: auto;}
+    7
+}
+
+
+nav {
+    background: #f2f2f2;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Syne Mono', monospace;
+}
+
+nav h4 {
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+nav a {
+    color: black;
+    display: block;
+    line-height: 1.3em;
+}
+
+nav a:hover {
+    color: #ca0000;
+    transition: .3s
+}
+
+.hero {
+    background: url('/img/ashkan-forouzani-3A38wAgyEmk-unsplash.jpg');
+    display: grid;
+}
+.hero { 
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url('/img/ashkan-forouzani-3A38wAgyEmk-unsplash.jpg');
+    /* creates a transparent linear gradient over the background image to make text more legible */
+    grid-column: 1/4;
+    height: 400px;
     background-size: cover;
-  }
-  
-  /* Position text in the middle of the page/image */
-.bg-text {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 80%;
-    padding: 20px;
+    color: linen;
+    max-width: 100%;
+    place-content: center;
+    
+}
+
+.hero-text {
     text-align: center;
+    backdrop-filter: blur(10px);
+    margin: 20px;
+    border: solid white;
+    padding: 15px;
 }
 
 .checkbox {
-    justify-content: space-evenly;
+    background-color: #e62887;
+    color: white;
+}
+
+.checkbox ul {
+    display: flex;
+    font-size: .8em;
+    justify-content: space-around;
+    font-family: 'arial';
+    padding: .2em;
+}
+
+.cards-wrapper{
+    /* background: linear-gradient(90deg, hsla(239, 77%, 70%, 1) 0%, hsla(0, 0%, 100%, 1) 100%); */
+    background: white;
+    display: grid;
+    place-items: center center;
+    padding-top: 30px;
+    padding-bottom: 30px;
     width: 100%;
+}
+
+.container {
+    position: relative;
+    opacity: 0.9;
+}
+
+.container:hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.container:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.2;
+}  
+
+.card>.container:after{
+    background-color: rgb(31, 30, 30);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    grid-gap: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18 );
+    background: linear-gradient(180deg, rgb(229, 195, 153) 0%, rgb(236, 233, 139) 100%);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.details {
+    padding: 20px 10px;
+}
+
+.details>h3 {
+    font-weight: 600;
+    font-size: 30px;
+    color: firebrick;
+    margin: 10px 0 15px 0;
     text-align: center;
-    background-color: rgb(236, 21, 21);
-    color: linen;
-    margin-bottom: 50px;
+}
+
+.details>p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.styles-wrapper {
+    background: #C6ECAE;
+    display: grid;
+    place-items: center center;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .styles {
-    margin-top: 100px;
+    text-transform: uppercase;
+    font-size: 2em;
     text-align: center;
-    font-size: 50px;
+    padding-bottom: 20px;
+    place-content: center;
 }
 
-.card {
+.styles p {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.style-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     padding: 20px;
-    background: linear-gradient(to bottom, #F9F9F9, #5d8f77);
-    justify-content: center;
-    align-items: center;
-    border: none;
+    grid-gap: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18 );
+    background: linear-gradient(180deg, rgb(229, 195, 153) 0%, rgb(236, 233, 139) 100%);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.testimonials-section h1 {
+    padding-bottom: 4em;
     text-align: center;
-    line-height: 2rem;
-}
-
-
-
-.card img{
-    overflow: hidden;
-    height: 400px;
-    width: 400px;
-    border-radius: 5%;
-}
-
-
-.blurbs {
+    font-weight: bold;
+    font-size: 2em;
+  }
+  
+  .testimonials-section li {
     text-align: center;
-    margin: 20px;
-    align-items: center;
-    display: flex;
-    height: 20vh;
+    padding: 2em 1em;
+    width: 80%;
+    margin: 0 auto 5em auto;
+    border-radius: 1em;
+  }
+  
+  .testimonials-section li img {
+    width: 200;
+    height: 112px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-top: -4.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    padding-top: 1.2em;
+  }
+
+.footer-section {
+    background-color: #C6ECAE;
+    padding: 2em;
 }
 
-.blurbs img {
-    width: 70px;
-    height: 70px;
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
 }
 
-.checkbox li {
-    list-style: none;
-}
+@media screen and (min-width: 800px) {
+    nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: .5em;
+    }
 
-.quotes {
-    background-color: linen;
-    margin-top: 100px;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-    line-height: 2.5rem;
-}
+    nav h4 {
+        padding-bottom: 1.5em;
+    }
 
-.names {
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-    color: rgb(95, 9, 9);
-    font-style: italic;
-    line-height: 1.2;
-}
+    .header-text {
+        text-align: center;
+    }
 
-footer {
-    background: linear-gradient(to bottom, #999999, #8F8F8F);
-    width: 100vw;
-    padding: 50px 0;
-}
+    .header-img {
+        position: absolute;
+        top: 10%;
+        bottom: 100%;
+        justify-content: center;
+        left: 70%;
+        right: 50%;
+        transition: .5s;
+    }
 
-footer .logo {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 70px;
-    margin: auto;
+    .testimonials-section {
+        display: flex;
+    }
 }
-
-footer li {
-    list-style: none;
-    text-align: center;
-}
-
-footer .copy{
-    text-align: center;
-}
+  
