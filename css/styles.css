@@ -125,7 +125,7 @@ nav a:hover {
     width: 100%;
 }
 
-.container {
+/* .container {
     position: relative;
     opacity: 0.9;
 }
@@ -148,7 +148,7 @@ nav a:hover {
 
 .card>.container:after{
     background-color: rgb(31, 30, 30);
-}
+} */
 
 .cards {
     display: grid;
@@ -291,7 +291,8 @@ nav a:hover {
     }
 
     .testimonials-section {
-        display: flex;
+        display: grid;
+        grid-template-columns: 180px auto;
     }
 }
   
